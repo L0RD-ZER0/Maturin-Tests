@@ -18,11 +18,11 @@ fn sumof(n1: isize, n2: isize) -> PyResult<isize> {
 }
 
 #[pyfunction]
-#[pyo3(text_signature = "(string, /) -> SAS")]
+#[pyo3(text_signature = "(string, /) -> Basilisks\n\tNandekokoni")]
 fn capitalize(strings: String) -> PyResult<String> {
     let mut res: String = String::new();
     for i in strings.split_whitespace() {
-        res.push_str( (i[0..1].to_uppercase() + &i[1..]).as_str() )
+        res.push_str( (" ".to_owned() + i[0..1].to_uppercase().as_str() + &i[1..]).as_str() )
     }
     Ok(res)
 }

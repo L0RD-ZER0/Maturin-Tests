@@ -8,7 +8,7 @@ fn sumof(__py: Python, n1: isize, n2: isize) -> PyResult<isize> {
 fn capitalize(__py: Python, strings: String) -> PyResult<String> {
     let mut res: String = String::new();
     for i in strings.split_whitespace() {
-        res.push_str( (i[0..1].to_uppercase() + &i[1..]).as_str() )
+        res.push_str( (" ".to_owned() + i[0..1].to_uppercase().as_str() + &i[1..]).as_str() )
     }
     Ok(res)
 }

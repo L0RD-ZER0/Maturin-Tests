@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+maturin = "*"
+setuptools-rust = "*"
+pyo3 = {path = "./pyo3/target/wheels/pyo3-0.1.0-cp39-none-win_amd64.whl"}
+rust-cpython = {path = "./rust-cpython/target/wheels/rust_cpython-0.1.0-cp39-none-win_amd64.whl"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
